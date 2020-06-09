@@ -1,0 +1,30 @@
+
+        <?php
+          if(!empty($getData[2])){
+            echo $getData[1];
+            if($getData[2]=="ODM"){ ?>
+            <img width="5%" height="30%" src="download.jpg">
+            <?php }elseif ($getData[2]=="Jubilee"){ ?>
+            <img width="5%" height="30%" src="download2.png">
+            <?php }elseif ($getData[2]=="KANU"){ ?>
+            <img width="5%" height="30%" src="">
+            <?php }elseif ($getData[2]=="WDM K"||$getData[2]=="WDM K."){ ?>
+            <img width="5%" height="30%" src="download5.jpg">
+            <?php } elseif ($getData[2]=="CCM"){ ?>
+            <img width="5%" height="30%" src="">
+            <?php } elseif ($getData[2]=="FORD Kenya"){ ?>
+            <img width="5%" height="30%" src="download4.jpg">
+            <?php } elseif ($getData[2]=="Narc Kenya"){ ?>
+            <img width="5%" height="30%" src="download3.jpg">
+            <?php }
+                }
+                else {
+                  if(strpos($getData[1],"- Jubilee")){
+                    echo str_replace("- Jubilee","",$getData[1]);?>
+                      <img width="5%" position="absolute"; height="30%" src="download.jpg">
+            <?php }
+                  else if(strpos($getData[1],"- ODM")){
+                    echo str_replace("- ODM","",$getData[1]);?>
+            <img width="5%" height="30%" src="download2.png">
+            <?php }
+                }?>
